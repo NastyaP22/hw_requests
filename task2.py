@@ -1,7 +1,5 @@
 import requests
 
-token = 'y0_AgAAAABQ2RFCAADLWwAAAADjKbu02uw28PIPQDWyjJzGijYoLF9ZKUA'
-
 class YandexUpload:
     def __init__(self, token):
         self.token = token
@@ -25,5 +23,6 @@ class YandexUpload:
         if response.status_code == 201:
             return 'success'
 
-yandextest = YandexUpload('y0_AgAAAABQ2RFCAADLWwAAAADjKbu02uw28PIPQDWyjJzGijYoLF9ZKUA')
+yandextest = YandexUpload('')
+#там должен был быть токен, но в задании было сказано не выкладывать его на гитхаб
 print(yandextest.upload('f1.txt', 'f1.txt'))
